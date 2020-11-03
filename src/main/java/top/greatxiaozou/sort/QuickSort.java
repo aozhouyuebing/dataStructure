@@ -9,7 +9,6 @@ public class QuickSort {
         System.out.println();
 
         sort(ints,0,ints.length-1);
-
         MyUtils.print(ints);
     }
 
