@@ -24,7 +24,8 @@ public class MergeSort {
 
         merge(arr,left,mid+1,right);
     }
-
+    //此处的rightBound可以取到，所以在实例化中间数组的时候要+1，传入时为len-1;
+    //rightbound 为最右边可以取到的数
     public static void merge(int[] arr,int left,int right,int rightBound){
         int mid = right-1;
         int i = left;
