@@ -7,7 +7,6 @@ public class QuickSort {
         int[] ints = MyUtils.randomArr();
         MyUtils.print(ints);
         System.out.println();
-
         sort(ints,0,ints.length-1);
         MyUtils.print(ints);
     }
@@ -25,9 +24,9 @@ public class QuickSort {
         int left = leftbound;
         int right = rightbound-1;
 
-        while (left<=right){
+        while (left<=right&&left+right!=0){
             while (arr[left]<=pivot && left<=right) left++;
-            while (arr[right]>pivot && left<=right) right--;
+            while (arr[right]>pivot && left<=right&&right>0) right--;
 
             //大右小左
             if (left<right) MyUtils.swap(arr,left,right);

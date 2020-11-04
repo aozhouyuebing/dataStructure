@@ -22,7 +22,7 @@ public class MyUtils {
         Random random = new Random();
         int[] arr = new int[20];
         for (int i = 0; i < 20; i++) {
-            arr[i] = random.nextInt(100);
+            arr[i] = random.nextInt(51);
         }
         return arr;
     }
