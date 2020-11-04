@@ -27,7 +27,6 @@ public class QuickSort {
         while (left<=right&&left+right!=0){
             while (arr[left]<=pivot && left<=right) left++;
             while (arr[right]>pivot && left<=right&&right>0) right--;
-
             //大右小左
             if (left<right) MyUtils.swap(arr,left,right);
 
