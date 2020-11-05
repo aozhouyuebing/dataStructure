@@ -1,7 +1,10 @@
 package top.greatxiaozou.sort;
 
 import top.greatxiaozou.Utils.MyUtils;
-
+/**
+ * @author 澳洲月饼
+ * 快速排序的一种实现
+ * */
 public class QuickSort {
     public static void main(String[] args) {
         int[] ints = MyUtils.randomArr();
