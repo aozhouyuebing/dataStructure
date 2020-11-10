@@ -1,6 +1,7 @@
 package top.greatxiaozou.arithmeticQuestion;
 
 import java.security.ProtectionDomain;
+import java.util.HashMap;
 
 /**
  * @author 澳洲月饼
@@ -11,10 +12,14 @@ import java.security.ProtectionDomain;
 
 public class NoneRepeatSubStr {
     public static void main(String[] args) {
-        System.out.println(solotion("abcdadae"));
+       // System.out.println(solotion2("au"));
+        char a = '9';
+        System.out.println('0');
+        System.out.println(a-48);
     }
 
     public static int solotion(String s){
+        if (s==null||s.length()==0) return 0;
         char[] chars = s.toCharArray();
 
         //使用一个26空间的int数组来记录字符最后一次出现的位置
@@ -25,7 +30,7 @@ public class NoneRepeatSubStr {
         }
         //初始化
         int max = 1;
-        last[chars[0]-'a'] = 1;
+        last[chars[0]-'a'] = 0;
         int preMaxlen = 1;
 
         for (int i = 1; i < chars.length; i++) {
@@ -33,9 +38,34 @@ public class NoneRepeatSubStr {
             max = Math.max(preMaxlen,max);
             last[chars[i]-'a']=i;
         }
-
         return max;
+    }
+    public static int solotion2(String s){
+        if (s==null||s.length()==0) return 0;
+        char[] chars = s.toCharArray();
 
+        //用map来存字符上一次出现的位置
+        //key：字符
+        //value：上次出现的位置
+        HashMap<Character,Integer> map = new HashMap<>();
 
+        //初始化
+        int max = 1;
+        map.put(chars[0],0);
+        int preMaxlen = 1;
+
+        for (int i = 1; i < chars.length; i++) {
+            if (!map.containsKey(chars[i])){
+                map.put(chars[i],i);
+                preMaxlen++;
+
+            }else {
+                preMaxlen = Math.min(i-map.get(chars[i]),preMaxlen+1);
+            }
+
+            max = Math.max(preMaxlen,max);
+            map.put(chars[i],i);
+        }
+        return max;
     }
 }
