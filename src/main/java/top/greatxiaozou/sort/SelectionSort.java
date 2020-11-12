@@ -11,7 +11,6 @@ public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {5,7,8,1,9,6,3,8,7,1,4};
         selectionSort(arr);
-
     }
 
     public static void selectionSort(int[] arr){

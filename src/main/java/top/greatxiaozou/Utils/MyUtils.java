@@ -18,6 +18,7 @@ public class MyUtils {
         arr[j] = temp;
     }
 
+    //产出一组20个数字的随机数组
     public static int[] randomArr(){
         Random random = new Random();
         int[] arr = new int[20];
