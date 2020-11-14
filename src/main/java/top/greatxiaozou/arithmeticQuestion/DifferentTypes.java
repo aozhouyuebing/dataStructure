@@ -42,13 +42,17 @@ public class DifferentTypes {
 
         for (String string : strings) {
             char[] chars = string.toCharArray();
+            //由于固定了是26个字母，而一个int类型是32位的，可以单独使用一个int类型的01位图来代表哈希map
             int map = 0;
             for (char aChar : chars) {
+                //如果存在，就将字符的位置异或到map上
                 map |= (1<<(aChar-'a'));
             }
 
+            //将处理好的map添加进集合，集合可以自动去重
             types.add(map);
         }
+        //返回集合的大小
         return types.size();
     }
 
