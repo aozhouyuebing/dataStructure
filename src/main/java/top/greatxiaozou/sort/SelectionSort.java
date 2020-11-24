@@ -2,9 +2,8 @@ package top.greatxiaozou.sort;
 
 import top.greatxiaozou.Utils.MyUtils;
 
-import java.util.Arrays;
 
-/*
+/**
 * 选择排序
 * */
 public class SelectionSort {

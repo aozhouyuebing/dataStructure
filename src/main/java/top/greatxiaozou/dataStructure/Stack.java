@@ -5,9 +5,13 @@ package top.greatxiaozou.dataStructure;
  * */
 public class Stack {
     //data的默认大小为100
-    int size = 100;
+    int size;
     int[] data = new int[size];
     int top=size-1;
+
+    public Stack() {
+        this(100);
+    }
 
     public Stack(int size) {
         this.size = size;
@@ -40,5 +44,10 @@ public class Stack {
         data[top]=0;
         top++;
         return result;
+    }
+
+    public int peek() throws Exception {
+        if (isEmpty()) throw new Exception("栈为空");
+        return data[top];
     }
 }

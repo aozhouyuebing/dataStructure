@@ -6,7 +6,9 @@ package top.greatxiaozou.dataStructure;
 
 //由于大多数情况下data存的都是int，此处没用使用泛型data，而是直接规定的int
 public class Node {
+    //该节点的数据
     public int data;
+    //下一个节点的位置
     public Node next;
 
     public Node() {
