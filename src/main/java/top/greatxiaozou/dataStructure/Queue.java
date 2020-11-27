@@ -10,6 +10,9 @@ public class Queue {
     int front = 0;
     int rear = 0;
 
+    public Queue() {
+    }
+
     public Queue(int size) {
         this.size = size;
     }
