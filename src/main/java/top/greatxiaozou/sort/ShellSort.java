@@ -7,7 +7,7 @@ public class ShellSort {
         sort(MyUtils.randomArr());
     }
 
-    static void sort(int[] arr){
+    public static void sort(int[] arr){
         //定义间隔
 //        for (int h = arr.length/2; h>0; h=h/2) {
 

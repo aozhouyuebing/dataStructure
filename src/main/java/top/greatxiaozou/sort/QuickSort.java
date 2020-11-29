@@ -37,15 +37,18 @@ public class QuickSort {
 
         while (left<=right && left+right != 0){
             //找到在右指针左边的大于pivot的数
-            while (arr[left]<=pivot && left<=right) left++;
+            while (arr[left] <= pivot && left <= right) left++;
             //找到在左指针右边的小于pivot的数
-            while (arr[right]>pivot && left<=right&&right>0) right--;
+            while (arr[right] > pivot && left <= right && right>0) right--;
             //找到之后如果仍然满足左指针在右指针左边，则进行交换
             if (left<right) MyUtils.swap(arr,left,right);
 
         }
+        MyUtils.print(arr);
+        System.out.println();
         //此时左右指针相等并不同时为零，将基准数放到中间
-        MyUtils.swap(arr,left,rightbound);
+            MyUtils.swap(arr,left,rightbound);
+
         return left;
     }
 }
