@@ -24,12 +24,14 @@ public class Main {
 
     public static void sort(Stack<Integer> stack){
         Stack<Integer> help = new Stack<>();
-
+        //当要排序的栈不为空时进入循环
         while(!stack.isEmpty()){
             int cur = stack.pop();
+            //当栈中元素大于辅助栈栈顶元素时，将辅助栈的弹出至栈中
             while(!help.isEmpty() && cur>help.peek()){
                 stack.push(help.pop());
             }
+            //当辅助栈为空或者cur<辅助站元素时
             help.push(cur);
         }
         while(!help.isEmpty()){
