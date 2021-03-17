@@ -9,6 +9,7 @@ public class MyUtils {
         for (int i : arr) {
             System.out.print(i+" ");
         }
+        System.out.println();
     }
 
     //交换数组中两个数的位置

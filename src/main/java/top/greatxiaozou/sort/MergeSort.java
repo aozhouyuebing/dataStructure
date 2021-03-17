@@ -13,6 +13,8 @@ public class MergeSort {
 
     }
 
+
+
     /**
      *
      * @param arr 需要排序的数组
@@ -20,7 +22,7 @@ public class MergeSort {
      * @param right 数组的右边界
      */
     public static void sort(int[] arr,int left,int right){
-        if (left>=right) return; //在左右执政碰撞或越界时返回
+        if (left>=right) return; //在左右指针撞或越界时返回
         int mid = (left+right)/2; //将中位数设定为左子数组的右边界和右子数组的左边界
         //左边排序
         sort(arr,left,mid);

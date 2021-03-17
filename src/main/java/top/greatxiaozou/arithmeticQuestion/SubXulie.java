@@ -46,6 +46,7 @@ public class SubXulie {
      * @ sum 数组中所有数的和
      * @ map 值为布尔类型，map[i][j]表示使用数组0-i位置上的值能不能得到j
      * 由于map，时间复杂度为O（n*sum）
+     * 因为用到了累加和，所以当累加和不很大的时候可以使用这个方法
      */
     public static int solution2(int[] nums,int m){
         int n=nums.length;
@@ -79,7 +80,14 @@ public class SubXulie {
         return max;
     }
 
-    public static int solution3(int[] arr,int m){
+    /**
+     *
+     * @param arr 数组
+     * @param m 需要模的数
+     * @return 最大值
+     *
+     */
+    public static int solution3(int[] arr, int m){
         boolean[][] map = new boolean[arr.length][m];
 
         //第一行和第一列设好了
@@ -100,7 +108,6 @@ public class SubXulie {
                 else {
                     map[i][j] = map[i][j] | map[i-1][m+j-cur];
                 }
-
             }
         }
 

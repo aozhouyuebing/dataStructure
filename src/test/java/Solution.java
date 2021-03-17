@@ -1,3 +1,4 @@
+import org.junit.Test;
 import top.greatxiaozou.Utils.MyUtils;
 
 public class Solution {
@@ -21,5 +22,11 @@ public class Solution {
             }
         }
         return new int[]{a,b};
+    }
+
+    @Test
+    public void test01(){
+        int[][] arr = new int[][]{{}};
+        System.out.println(arr[0].length);
     }
 }

@@ -17,8 +17,10 @@ public class SelectionSort {
             int minPos = i;
 
             for (int j=i+1;j<arr.length;j++){
+                //找到最小数的下标
                 minPos = arr[j]<arr[minPos]?j:minPos;
             }
+            //最小数下标和首（i）位置交换
             MyUtils.swap(arr,minPos,i);
         }
         MyUtils.print(arr);
